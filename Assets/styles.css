@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: inline;
+    flex-wrap: wrap; /* Wrap items to new line if container width is smaller */
+}
+
+#sidebar {
+    width: auto;
+    background-color: #343a40;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 0 100%; /* Take full width on small screens, and 300px on larger screens */
+    margin: 20px;
+    color: #fff;
+}
+
+#sidebar h1 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#cityForm {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #6c757d;
+    border-radius: 4px;
+    color: #495057;
+}
+
+#cityInput::placeholder {
+    color: #6c757d;
+}
+
+button {
+    padding: 8px 20px;
+    background: linear-gradient(to bottom right, #007bff, #00b4ff);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    display: list-item;
+}
+
+button:hover {
+     background: linear-gradient(to bottom right, #0056b3, #0091ff);
+}
+
+.search-history {
+    margin-bottom: 20px;
+}
+
+.search-history-item {
+    margin-bottom: 10px;
+}
+
+.weather-info {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    margin: 20px;
+    color: #343a40;
+    width: auto;
+    
+}
+
+.forecast-container {
+    display: flex;
+    border-top: 2px solid #ffc107; /* Yellow border on the top */
+}
+
+.forecast-card {
+    flex: auto;
+    background-color: lightgray;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #17a2b8; /* Cyan border */;
+    margin: 5px;
+}
+
+.forecast-card p {
+    margin: 5px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+
+/* Media queries for responsive design */
+@media screen and (min-width: 800px) {
+    #sidebar {
+        flex: 0 0 auto;
+        margin-right: 20px; /* Add space between sidebar and content */
+    }
+
+    #content {
+        flex: 2; /* Content takes remaining space on larger screens */
+    }
+}
+
+/* Media queries for forecast card responsiveness */
+@media screen and (max-width: 799px) {
+    .forecast-container {
+        flex-wrap: wrap; /* Allow forecast cards to wrap to new line */
+    }
+
+    .forecast-card {
+        width: auto; /* Remove fixed width */
+        margin-bottom: 20px; /* Add bottom margin to separate forecast cards */
+    }
+}

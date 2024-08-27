@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./Assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <h1>Weather App</h1>
+            <h2>Enter a city to get the weather</h2>
+            <form id="cityForm">
+                <input type="text" id="cityInput" placeholder="Enter city">
+                <button type="submit">Search</button>
+            </form>
+            <div class="dropdown" id="searchHistoryDropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="searchHistoryDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Search History
+                </button>
+                <div class="dropdown-menu" aria-labelledby="searchHistoryDropdownButton" id="searchHistoryItems">
+                </div>
+            </div>
+        </div>
+    
+        <div id="content">
+            <div id="weatherInfo" class="weather-info"></div>
+            <div id="forecast" class="forecast-container"></div>
+        </div>
+    </div>
+
+<script src="./Assets/script.js"></script>
+</body>
+</html>
